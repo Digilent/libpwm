@@ -18,7 +18,7 @@ lib$(NAME).so: lib$(NAME).so.$(VERSION)
 	ln -s lib$(NAME).so.$(MAJOR) lib$(NAME).so
  
 %.o: %.c
-	$(CC) $(CFLAGS) -c -fPIC $(LIBSOURCES) -isystem ./.
+	$(CC) $(CFLAGS) -c -fPIC $(LIBSOURCES) -isystem ./. -isystem ../uio
  
 clean:
 	rm -rf *.o *.so *.so.*
